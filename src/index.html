@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section>
+    <sp-heading size="XXS">Replace text</sp-heading>
+    <div id="rules"></div>
+    <sp-action-button id="addRule" quiet>+ Add replacement</sp-action-button>
+    <div class="row">
+      <sp-checkbox id="matchCase">Match case</sp-checkbox>
+      <sp-checkbox id="useRegex">Regular expressions</sp-checkbox>
+    </div>
+  </section>
+
+  <section>
+    <sp-heading size="XXS">Add text</sp-heading>
+    <div class="pair">
+      <sp-textfield id="prefix" placeholder="Prefix"></sp-textfield>
+      <sp-textfield id="suffix" placeholder="Suffix"></sp-textfield>
+    </div>
+  </section>
+
+  <section>
+    <sp-checkbox id="numOn">Add a number</sp-checkbox>
+    <div id="numOpts">
+      <div class="field">
+        <sp-label>Where</sp-label>
+        <select id="numPos">
+          <option value="after" selected>After name</option>
+          <option value="before">Before name</option>
+        </select>
+      </div>
+      <div class="field">
+        <sp-label>Order</sp-label>
+        <select id="order">
+          <option value="stack" selected>Layers panel, top first</option>
+          <option value="canvas">Canvas, left to right, then down</option>
+        </select>
+      </div>
+      <div class="triple">
+        <div><sp-label>Separator</sp-label><sp-textfield id="numSep" value="_"></sp-textfield></div>
+        <div><sp-label>Start at</sp-label><sp-textfield id="numStart" type="number" value="1"></sp-textfield></div>
+        <div><sp-label>Digits</sp-label><sp-textfield id="numDigits" type="number" value="2"></sp-textfield></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <sp-heading size="XXS">Preview</sp-heading>
+    <div id="status" class="status"></div>
+    <div id="preview"></div>
+  </section>
+
+  <footer>
+    <sp-button id="apply" variant="cta" disabled>Rename</sp-button>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "artboard-renamer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Photoshop UXP panel that batch-renames artboards: find and replace, prefix and suffix, numbering.",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test src/",
+    "package": "sh scripts/package.sh"
+  }
+}
